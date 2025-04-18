@@ -1,0 +1,49 @@
+{
+  "id": "devopsdemo-test-001",
+  "version": "2.0",
+  "name": "Bockmic1Test",
+  "url": "http://devopsdemo:8080",
+  "tests": [
+    {
+      "id": "test-01",
+      "name": "StartAndClick",
+      "commands": [
+        {
+          "id": "open-home",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        },
+        {
+          "id": "wait-todo-tile",
+          "command": "waitForElementVisible",
+          "target": "css=.tile-wet-asphalt",
+          "value": "10000"
+        },
+        {
+          "id": "click-todo-tile",
+          "command": "click",
+          "target": "css=.tile-wet-asphalt",
+          "value": ""
+        },
+        {
+          "id": "pause",
+          "command": "pause",
+          "target": "",
+          "value": "2000"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "suite-001",
+      "name": "StandardSuite",
+      "parallel": false,
+      "timeout": 300,
+      "tests": ["test-01"]
+    }
+  ],
+  "urls": ["http://devopsdemo:8080/"],
+  "plugins": []
+}
